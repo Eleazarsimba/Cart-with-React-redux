@@ -1,0 +1,222 @@
+*{
+  overflow-x:hidden;
+  margin: 0;
+}
+/* Navigation bar properties */
+/* For large screens */
+@media only screen and (min-width: 700px) {
+  .navBar{
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 20px;
+    border: 1px solid rgb(238, 232, 232);
+    box-shadow: 0px 0px 2px 2px rgb(238, 232, 232);
+    z-index: 1;
+  }
+  .navBar h4{
+    margin-left: auto;
+    margin-right: 30px;
+    order: 2;
+    overflow: hidden;
+  }
+  .navBar h2{
+    padding-left: 10px;
+  }
+  .navBar h6{
+    padding-left: 10px;
+    padding-top: 9px;
+  }
+  .cartCount{
+    padding: 3px;
+    background-size: auto;
+    background-color: #EEA47FFF;
+    min-width: 20px;
+    width: max-content;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+
+    margin-top: -25px;
+    margin-left: 60px;
+  }
+}
+/* For small screens */
+@media only screen and (max-width: 700px) {
+  .navBar{
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 15px;
+    border: 1px solid rgb(238, 232, 232);
+    box-shadow: 0px 0px 2px 2px rgb(238, 232, 232);
+    z-index: 1;
+  }
+  .navBar h4{
+    margin-left: auto;
+    margin-right: 20px;
+    order: 2;
+    overflow: hidden;
+  }
+  .navBar h2{
+    padding-left: 10px;
+  }
+  .navBar h6{
+    display: none;
+  }
+  .cartCount{
+    padding: 3px;
+    background-size: auto;
+    background-color: #EEA47FFF;
+    min-width: 20px;
+    width: max-content;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+
+    margin-top: -25px;
+    margin-left: 60px;
+  }
+}
+/* application body */
+/* for large screen */
+@media only screen and (min-width: 1000px) {
+  .cartData{
+    padding: 10px;
+    margin-top: 65px;
+  }
+  .imagecolumn {
+    float: left;
+    width: 24%;
+    padding: 5px;
+  }
+  .productDesc{
+    width: 80%;
+    padding: auto;
+  }
+  .addToCart{
+    background-color: #EEA47FFF;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: 0.5s;
+  }
+  .addToCart:active{
+    box-shadow: 0 5px #666;
+    transform: translateX(5px);
+  }
+}
+/* for medium screen */
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .cartData{
+    padding: 10px;
+    margin-top: 65px;
+  }
+  .imagecolumn {
+    float: left;
+    width: 48%;
+    padding: 5px;
+  }
+  .productDesc{
+    width: 85%;
+  }
+  .addToCart{
+    background-color: #EEA47FFF;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: 0.5s;
+  }
+  .addToCart:active{
+    box-shadow: 0 5px #666;
+    transform: translateX(5px);
+  }
+}
+/* for small screen */
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  .cartData{
+    padding: 10px;
+    margin-top: 60px;
+  }
+  .imagecolumn {
+    float: left;
+    width: 96%;
+    padding: 5px;
+    margin-top: 60px;
+  }
+  .productDesc{
+    width: 85%;
+  }
+  .addToCart{
+    background-color: #EEA47FFF;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: 0.5s;
+  }
+  .addToCart:active{
+    box-shadow: 0 5px #666;
+    transform: translateX(5px);
+  }
+}
+/* for extra small screen */
+@media only screen and (max-width: 500px) {
+  .cartData{
+    padding: 10px;
+  }
+  .imagecolumn {
+    float: left;
+    width: 96%;
+    padding: 5px;
+  }
+  .productDesc{
+    width: 85%;
+  }
+  .addToCart{
+    background-color: #EEA47FFF;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: 0.5s;
+  }
+  .addToCart:active{
+    box-shadow: 0 5px #666;
+    transform: translateX(5px);
+  }
+}
