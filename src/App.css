@@ -11,7 +11,7 @@
   margin-top: 20px;
 }
 .cartTable td, .cartTable th{
-  border: 1px solid black;
+  border: 1px solid rgb(188, 187, 187);
   text-align: left;
   padding: 8px;
 }
@@ -20,6 +20,21 @@
   color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
+}
+.increase, .decrease{
+  background-color: #666;
+  padding-left:5px;
+  padding-right: 5px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 2px;
+  user-select: none;
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+.cartInfo{
+  padding: 10px;
 }
 /* Navigation bar properties */
 /* For large screens */
@@ -119,14 +134,47 @@
 }
 /* application body */
 /* for large screen */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1050px) {
   .cartData{
-    padding: 10px;
+    padding: 20px;
     margin-top: 65px;
   }
   .imagecolumn {
     float: left;
     width: 24%;
+    padding: 5px;
+    height: auto;
+  }
+  .addToCart{
+    background-color: #EEA47FFF;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: 0.5s;
+  }
+  .addToCart:hover{
+    background-color: #ff0000;
+  }
+  .addToCart:active{
+    box-shadow: 0 5px #666;
+    transform: translateX(5px);
+  }
+}
+/* for medium bigger screen */
+@media only screen and (min-width: 940px) and (max-width: 1050px) {
+  .cartData{
+    padding: 20px;
+    margin-top: 65px;
+  }
+  .imagecolumn {
+    float: left;
+    width: 30%;
     padding: 5px;
   }
   .addToCart{
@@ -151,9 +199,9 @@
   }
 }
 /* for medium screen */
-@media only screen and (min-width: 600px) and (max-width: 1000px) {
+@media only screen and (min-width: 600px) and (max-width: 940px) {
   .cartData{
-    padding: 10px;
+    padding: 20px;
     margin-top: 65px;
   }
   .imagecolumn {
@@ -185,7 +233,7 @@
 /* for small screen */
 @media only screen and (min-width: 500px) and (max-width: 600px) {
   .cartData{
-    padding: 10px;
+    padding: 15px;
     margin-top: 60px;
   }
   .imagecolumn {
@@ -218,7 +266,8 @@
 /* for extra small screen */
 @media only screen and (max-width: 500px) {
   .cartData{
-    padding: 10px;
+    padding: 15px;
+    margin-top: 60px;
   }
   .imagecolumn {
     float: left;

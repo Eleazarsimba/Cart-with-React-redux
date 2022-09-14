@@ -19,6 +19,8 @@ const Home = () => {
       const navigate = useNavigate();
 
       const phoneList = useSelector((state) => state.products.value)
+      const cartList = useSelector((state) => state.cart.value)
+      let Quant = useSelector((state) => state.cart.quantity)
 
       const dispatch = useDispatch();
   return (
@@ -28,7 +30,7 @@ const Home = () => {
             <h6>Shop with us today for greater experience</h6>
             <h4>
                 <span className='cartPosition'><BsCart3 size={20}/> Cart</span>
-                <div className='cartCount' onClick={()=>navigate("/cart")}>0</div>
+                <div className='cartCount' onClick={()=>navigate("/cart")}>{cartList.length}</div>
             </h4>
         </div>
 
@@ -36,21 +38,24 @@ const Home = () => {
             <h3>PRODUCTS</h3>
             <div className="imagerow"> 
                 {phoneList.map((phone) => {
-                return(
-                   <div className="imagecolumn" key={phone.id}>
-                        <img src={`assets/${phone.phonename}.jpg`} alt='' width='80%' />
-                        <h5>{phone.phonename}</h5>
-                        <p>{phone.description}</p>
-                        <h5>KSh. {phone.price}</h5>
-                        <div className='addToCart' onClick={() => 
-                            dispatch(addToCart({
-                              ID: phone.id,
-                              ItemName: phone.phonename,
-                              Price: phone.price
-                            }))
-                        }>ADD TO CART</div>
-                    </div>
-                )
+                    return(
+                        <div className="imagecolumn" key={phone.id}>
+                            <img src={`assets/${phone.phonename}.jpg`} alt='' width='80%' />
+                            <h5>{phone.phonename}</h5>
+                            <p>{phone.description}</p>
+                            <h5>KSh. {phone.price}</h5>
+                            <div className='addToCart' onClick={() => 
+                                dispatch(addToCart({
+                                id: phone.id,
+                                ItemName: phone.phonename,
+                                Quantity: 1,
+                                Price: phone.price
+                                }))
+
+                                // console.log(Quant)
+                            }>ADD TO CART</div>
+                        </div>
+                    )
                 })}
             </div>
         </div>

@@ -9,13 +9,13 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-        // const itemInCart = state.value.find((phone) => phone.id === action.payload.id);
-        // if (itemInCart) {
-        //   itemInCart.quantity++;
-        // } else {
-        //   state.value.push(action.payload);
-        // }
-        state.value.push(action.payload);
+        const itemInCart = state.value.find((cart) => cart.id === action.payload.id);
+        if (itemInCart) {
+          itemInCart.quantity++;
+        } else {
+          state.value.push(action.payload);
+        }
+        // state.value.push(action.payload);
       },
       incrementQuantity: (state, action) => {
         const phone = state.value.find((phone) => phone.id === action.payload);
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
         }
       },
       removeItem: (state, action) => {
-        state.value = state.value.filter((phone) => phone.id !== action.payload);
+        state.value = state.value.filter((cart) => cart.id !== action.payload.id);
       },
     },
   });
