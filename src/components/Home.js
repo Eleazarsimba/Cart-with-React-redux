@@ -1,7 +1,10 @@
 import React from 'react'
 import { BsCart3 } from 'react-icons/bs';
 import $ from 'jquery'; 
-import { useSelector } from 'react-redux';
+import {useNavigate} from "react-router-dom"
+import { useSelector, useDispatch } from 'react-redux';
+
+import { addToCart } from '../features/CartSlice';
 
 const Home = () => {
     // set nav bar to remain fixed after scroll 
@@ -13,7 +16,11 @@ const Home = () => {
         }
       });
 
+      const navigate = useNavigate();
+
       const phoneList = useSelector((state) => state.products.value)
+
+      const dispatch = useDispatch();
   return (
     <div>
         <div className='navBar'>
@@ -21,7 +28,7 @@ const Home = () => {
             <h6>Shop with us today for greater experience</h6>
             <h4>
                 <span className='cartPosition'><BsCart3 size={20}/> Cart</span>
-                <div className='cartCount'>0</div>
+                <div className='cartCount' onClick={()=>navigate("/cart")}>0</div>
             </h4>
         </div>
 
@@ -35,7 +42,13 @@ const Home = () => {
                         <h5>{phone.phonename}</h5>
                         <p>{phone.description}</p>
                         <h5>KSh. {phone.price}</h5>
-                        <div className='addToCart'>ADD TO CART</div>
+                        <div className='addToCart' onClick={() => 
+                            dispatch(addToCart({
+                              ID: phone.id,
+                              ItemName: phone.phonename,
+                              Price: phone.price
+                            }))
+                        }>ADD TO CART</div>
                     </div>
                 )
                 })}
