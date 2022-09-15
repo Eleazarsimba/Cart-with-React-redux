@@ -10,9 +10,11 @@ const Home = () => {
     // set nav bar to remain fixed after scroll 
     $(window).scroll(function(e){ 
         var $el = $('.navBar'); 
+        var $cartDat = $('.cartData'); 
         var isPositionFixed = ($el.css('position') === 'fixed');
         if ($(this).scrollTop() && !isPositionFixed){ 
           $el.css({'position': 'fixed', 'top': '0px'}); 
+          $cartDat.css({'marginTop': '65px'});
         }
       });
 
