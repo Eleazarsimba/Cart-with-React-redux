@@ -20,7 +20,7 @@ const Home = () => {
 
       const phoneList = useSelector((state) => state.products.value)
       const cartList = useSelector((state) => state.cart.value)
-      let Quant = useSelector((state) => state.cart.quantity)
+    //   let Quant = useSelector((state) => state.cart.quantity)
 
       const dispatch = useDispatch();
   return (
@@ -48,11 +48,10 @@ const Home = () => {
                                 dispatch(addToCart({
                                 id: phone.id,
                                 ItemName: phone.phonename,
-                                Quantity: 1,
                                 Price: phone.price
                                 }))
 
-                                // console.log(Quant)
+                                // console.log(Quant++)
                             }>ADD TO CART</div>
                         </div>
                     )

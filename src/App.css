@@ -33,8 +33,89 @@
   border: 1px solid #666;
   border-radius: 3px;
 }
+.disableddecrease{
+  background-color: rgb(214, 210, 210);
+  padding-left:5px;
+  padding-right: 5px;
+  color: #fff;
+  font-weight: 600;
+  margin: 2px;
+  user-select: none;
+  border: 1px solid rgb(214, 210, 210);
+  border-radius: 3px;
+}
 .cartInfo{
   padding: 10px;
+}
+.checkOut {
+  background-color: #0298025c;
+  width: auto;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 20px;
+  margin-left: 10%;
+  cursor: pointer;
+  float: left;
+}
+.checkOut:hover{
+  /* background-color: #b3f8b3; */
+  color: #0298025c;
+  background-color: #fff;
+  border: 1px solid #0298025c;
+}
+.Pay{
+  padding: 20px;
+}
+.Pay p, .Pay input{
+  padding: 3px;
+}
+#enterNumber:after {
+  content: ' \002A';
+  color: #ff0000;
+}
+.input_number{
+  height: 25px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #fff;
+}
+.input_amount{
+  height: 25px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #fff;
+}
+.paybtn{
+  margin-top: 10px;
+  background-color: #589c58;
+  padding: 6px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.paybtn:hover{
+  padding: 8px;
+  color: #0298025c;
+  background-color: #fff;
+  border: 1px solid #0298025c;
+  font-weight: 900;
+}
+.paybtn:hover:after {
+  opacity: 1;
+  right: 0;
+}
+.paybtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateX(5px);
 }
 /* Navigation bar properties */
 /* For large screens */
