@@ -8,7 +8,7 @@ const Pay = ({amount1}) => {
 
   const stkPush = (e) =>{
     e.preventDefault()
-    axios.post('',{
+    axios.post('https://pay-na-mpesa.herokuapp.com/token',{
         //set new values
         amount: amount1,
         phone: P_Number      
