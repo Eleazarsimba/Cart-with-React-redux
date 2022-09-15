@@ -345,7 +345,7 @@
   }
 }
 /* for extra small screen */
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 300px) and (max-width: 500px) {
   .cartData{
     padding: 15px;
     /* margin-top: 60px; */
@@ -374,5 +374,147 @@
   .addToCart:active{
     box-shadow: 0 5px #666;
     transform: translateX(5px);
+  }
+  .cartTable td, .cartTable th{
+    border: 1px solid rgb(188, 187, 187);
+    text-align: left;
+    padding: 3px;
+    font-size: 13px;
+  }
+  .increase, .decrease{
+    background-color: #666;
+    padding-left:3px;
+    padding-right: 2px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 2px;
+    user-select: none;
+    border: 1px solid #666;
+    border-radius: 3px;
+  }
+  .disableddecrease{
+    background-color: rgb(214, 210, 210);
+    padding-left:3px;
+    padding-right: 2px;
+    color: #fff;
+    font-weight: 600;
+    margin: 2px;
+    user-select: none;
+    border: 1px solid rgb(214, 210, 210);
+    border-radius: 3px;
+  }
+
+  .checkOut {
+    background-color: #0298025c;
+    width: auto;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 20px;
+    margin-left: 10%;
+    float: left;
+    font-size: 13px;
+  }
+  .Pay{
+    padding: 20px;
+    font-size: 13px;
+  }
+  .Pay p, .Pay input{
+    padding: 3px;
+    font-size: 13px;
+  }
+  #cartRem{
+    font-size: 10px;
+  }
+  #cartImg{
+    display: none;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .cartData{
+    padding: 15px;
+    /* margin-top: 60px; */
+  }
+  .imagecolumn {
+    float: left;
+    width: 96%;
+    padding: 5px;
+  }
+  .addToCart{
+    background-color: #EEA47FFF;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: 0.5s;
+  }
+  .addToCart:hover{
+    background-color: #ff0000;
+  }
+  .addToCart:active{
+    box-shadow: 0 5px #666;
+    transform: translateX(5px);
+  }
+
+  .cartTable td, .cartTable th{
+    border: 1px solid rgb(188, 187, 187);
+    text-align: left;
+    padding: 3px;
+    font-size: 12px;
+  }
+  .increase, .decrease{
+    background-color: #666;
+    padding-left:3px;
+    padding-right: 2px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 2px;
+    user-select: none;
+    border: 1px solid #666;
+    border-radius: 3px;
+  }
+  .disableddecrease{
+    background-color: rgb(214, 210, 210);
+    padding-left:3px;
+    padding-right: 2px;
+    color: #fff;
+    font-weight: 600;
+    margin: 2px;
+    user-select: none;
+    border: 1px solid rgb(214, 210, 210);
+    border-radius: 3px;
+  }
+
+  .checkOut {
+    background-color: #0298025c;
+    width: auto;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 20px;
+    margin-left: 10%;
+    float: left;
+    font-size: 12px;
+  }
+  .Pay{
+    padding: 20px;
+    font-size: 12px;
+  }
+  .Pay p, .Pay input{
+    padding: 3px;
+    font-size: 12px;
+  }
+  #cartRem{
+    font-size: 8px;
+  }
+  #cartImg{
+    display: none;
   }
 }

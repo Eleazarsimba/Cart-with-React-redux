@@ -23,10 +23,10 @@ const Cart = () => {
             <thead>
                 <tr>
                     <th>Phone Name</th>
-                    <th>Image</th>
+                    <th id='cartImg'>Image</th>
                     <th>Quantity</th>
                     <th>Cost</th>
-                    <th>Remove</th>
+                    <th id='cartRem'>Remove</th>
                     <th>Total Price</th>
                 </tr>
             </thead>
@@ -37,7 +37,7 @@ const Cart = () => {
                     return(
                         <tr key={cart.id} className="cartTable">
                             <td>{cart.ItemName}</td>
-                            <td><img src={`assets/${cart.ItemName}.jpg`} alt='' width='100px' height='100px' /></td>
+                            <td id='cartImg'><img src={`assets/${cart.ItemName}.jpg`} alt='' width='80px' height='80px' /></td>
                             <td>
                                 {
                                 cart.cartQuantity === 1 ? 
@@ -64,8 +64,8 @@ const Cart = () => {
                     )
                 })}
                      <tr>   
-                        <td colSpan="5">Total Sale</td>
-                        <td><b>KSh. {TotalSale}</b></td>
+                        <td colSpan="4">Total Sale</td>
+                        <td colSpan="4"><b>KSh. {TotalSale}</b></td>
                      </tr>
             </tbody>
         </table>
